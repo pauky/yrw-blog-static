@@ -1,0 +1,142 @@
+// 首页
+@import "../common/common";
+@import "../mixin/mixin-articles-list"; // 文章列表
+.header {
+	.mixin-side-bar {
+
+	}
+}
+.body {
+
+	.main-wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		.wrapper-left {
+			// 查看更多
+			.show-all {
+				margin-top: 20px;
+				text-align: center;
+				.all-art-link {
+					color: @black;
+					font-size: 16px;
+					&:hover {
+						color: @blue;
+					}
+				}
+			}
+			// 分页
+			.paging {
+				margin-top: 30px;
+			}
+		}
+		.wrapper-right {
+			.index-side {
+				// 精彩内容
+				.woderful-content {
+					background-color: @white;
+					padding: 10px;
+					margin-bottom: 20px;
+					.title {
+						font-size: 18px;
+						border-bottom: 1px solid @darkWhite;
+						padding-bottom: 10px;
+					}
+					.w-c-list {
+						list-style:none;
+						.item-cont {
+							.link {
+								color: @darkGrey;
+								display: inline-block;
+								margin-top: 10px;
+								min-width: 100%;
+								&:hover {
+									color: @fullBlack;
+									border-right: 1px solid @blue;
+								}
+							}
+						}
+					}
+				}
+				// 热门文章
+				.hot-articles {
+					background-color: @white;
+					padding: 10px;
+					.title {
+						font-size: 18px;
+						border-bottom: 1px solid @darkWhite;
+						padding-bottom: 10px;
+					}
+					.hot-articles-list {
+						list-style:none;
+						.item-art {
+							.link {
+								color: @darkGrey;
+								display: inline-block;
+								margin-top: 10px;
+								min-width: 100%;
+								&:hover {
+									color: @fullBlack;
+									border-right: 1px solid @blue;
+								}
+							}
+						}
+					}
+				}
+				// 友情链接
+				.friend-link {
+					margin-top: 20px;
+					background-color: @white;
+					padding: 10px;
+					margin-bottom: 20px;
+					.title {
+						font-size: 18px;
+						border-bottom: 1px solid @darkWhite;
+						padding-bottom: 10px;
+					}
+					.list {
+						list-style:none;
+						.item-l {
+							.link {
+								color: @darkGrey;
+								display: inline-block;
+								margin-top: 10px;
+								min-width: 100%;
+								&:hover {
+									color: @fullBlack;
+									border-right: 1px solid @blue;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 小屏幕适应
+@media screen and (max-width: 960px) {
+	.body {
+		.main-wrapper {
+			display: block!important;
+			&.ui.grid > .row > [class*="twelve wide"].column,
+			&.ui.grid > .column.row > [class*="twelve wide"].column,
+			&.ui.grid > [class*="twelve wide"].column,
+			&.ui.column.grid > [class*="twelve wide"].column {
+				&.wrapper-left {
+					display: block;
+					width: 100%!important;
+				}
+			}
+			&.ui.grid > .row > [class*="four wide"].column,
+			&.ui.grid > .column.row > [class*="four wide"].column,
+			&.ui.grid > [class*="four wide"].column,
+			&.ui.column.grid > [class*="four wide"].column {
+				&.wrapper-right {
+					display: block;
+					width: 100%!important;
+				}
+			}
+		}
+	}
+}

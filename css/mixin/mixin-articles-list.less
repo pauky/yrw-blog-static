@@ -1,0 +1,31 @@
+// 文章列表
+@import "../common/variables";
+.mixin-articles-list {
+	width: 100%;
+	.item-article {
+		margin-top: 20px;
+		background-color: @white;
+		padding: 10px;
+		//box-shadow: 0 0 6px rgba(0,0,0,0.2);
+		display: block;
+		color: @fullBlack;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:hover {
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			.title {
+				color: @blue;
+			}
+		}
+		.title {
+			font-size: 24px;
+		}
+		.subtitle {
+			margin: 20px 0;
+		}
+		.others-info {
+			font-size: 12px;
+		}
+	}
+}

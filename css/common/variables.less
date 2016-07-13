@@ -1,0 +1,62 @@
+//@dev:                'http://127.0.0.1:3100/oo/@{version}';//--global-var=version=10
+//@sit:                'http://sit.static.pintu360.com/oo/@{version}';
+//@uat:                'http://static.pintu360.com/uat/oo/@{version}';
+//@prd:                'http://static.pintu360.com/oo/@{version}';
+//@staticDomain:  `"@{ENV}" == 'dev' ? @{dev} : ("@{ENV}" == 'sit' ? @{sit} : ("@{ENV}" == 'uat' ? @{uat} : ("@{ENV}" == 'prd' ? @{prd} : @{dev})))`; //根据less命令行参数选择staticDomain的全局变量, --global-var=ENV=dev
+
+/*-------------------
+      Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+@black            : #333333;//Modified
+@blue             : #1b95e0;//Modified
+@green            : #499751;//Modified
+@grey             : #999999;
+@orange           : #E07B53;
+@pink             : #D9499A;
+@purple           : #6751A4;//Modified
+@red              : #F73965;//Modified
+@teal             : #00B5AD;
+@yellow           : #F5BC00;//Modified
+
+/*---  Light Colors  ---*/
+@lightBlack       : #555555;//Modified
+@lightBlue        : #54C8FF;
+@lightGreen       : #1abc9c;
+@lightOrange      : #FF851B;
+@lightPink        : #FF8EDF;
+@lightPurple      : #855AFA;//Modified
+@lightRed         : #FF695E;
+@lightTeal        : #6DFFFF;
+@lightYellow      : #FFE21F;
+
+/*---  Dark Colors  ---*/
+@darkPurple       : #2D273D;//Defined
+
+/*---   Neutrals  ---*/
+@fullBlack        : #000000;
+@darkGrey         : #777777;//Modified
+@lightGrey        : #AAAAAA;//Modified
+@darkerWhite      : #DDDDDD;//Defined
+@darkWhite        : #EEEEEE;//Modified
+@offWhite         : #F6F5FC;//Modified
+@white            : #FFFFFF;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : @purple;//Modified
+@secondaryColor      : @yellow;//Modified
+
+@lightPrimaryColor   : @lightPurple;//Modified
+@lightSecondaryColor : @lightBlack;
+
+@darkPrimaryColor    : @darkPurple;//Defined
+
+@h1               : 2.857rem;//40
+@h2               : 2.286rem;//32
+@h3               : 1.714rem;//24
+@h4               : 1.429rem;//20
+@h5               : 1.429rem;//16

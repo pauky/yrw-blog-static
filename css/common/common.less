@@ -1,0 +1,65 @@
+// 公共样式
+@import "reset-css";
+@import "variables";
+@import "../mixin/mixin-top-bar"; // 页面头部
+@import "../mixin/mixin-footer"; // 页面尾部
+body, html {
+	background-color: #eee;
+	line-height: 1.5;
+	margin: 0;
+	padding:0;
+	height: 100%;
+	width: 100%;
+
+}
+
+.pusher {
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	min-height:100%;
+	height: auto !important;
+	height: 100%; /*IE6不识别min-height*/
+	position: relative;
+	width: 100%;
+}
+.body {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 100px;/*等于footer的高度*/
+}
+
+.footer {
+
+}
+
+.t-c {
+	text-align: center;
+}
+.t-r {
+	text-align: right;
+}
+.t-l {
+	text-align: left;
+}
+.f-l {
+	float: left;
+}
+.f-r {
+	float: right;
+}
+.clear-fix {
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+.hidden {
+	display: none !important;
+}

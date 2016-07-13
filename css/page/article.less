@@ -1,0 +1,89 @@
+// 文章详情页面
+@import "../common/common";
+@import "../mixin/mixin-markdown-body";
+.body {
+	background-color: @white;
+	max-width: 720px;
+	margin: 0 auto;
+	.article-wrapper {
+		padding: 0 10px;
+		margin-top: 20px;
+		.title {
+			font-size: 24px;
+			font-weight: bold;
+		}
+		.author-and-time {
+			font-size: 12px;
+			margin-top: 20px;
+			width: 100%;
+			margin-right: 0;
+			margin-left: 0;
+			padding: 0 20px;
+			.author {
+				width: 40%;
+			}
+			.time {
+				width: 60%;
+			}
+		}
+		.article-tags {
+			margin-top: 20px;
+			padding: 0 20px;
+		}
+		.content {
+			margin-top: 20px;
+		}
+	}
+	.remark {
+		padding: 20px 30px;
+		font-size: 14px;
+	}
+	//.comment-wrapper {
+	//	margin-top: 40px;
+	//	padding: 0 20px;
+	//}
+
+	// 文章的上下篇
+	.next-and-pre {
+		padding: 20px 30px;
+		font-size: 14px;
+		.t, .art-link {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.art-title {
+			max-width: 250px;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-align: left;
+		}
+	}
+}
+
+// 小屏幕适应
+@media screen and (max-width: 960px) {
+	.body {
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+		//overflow-x: hidden;
+		.next-and-pre {
+			display: block !important;
+			&.ui.grid > .row > [class*="eight wide"].column,
+			&.ui.grid > .column.row > [class*="eight wide"].column,
+			&.ui.grid > [class*="eight wide"].column,
+			&.ui.column.grid > [class*="eight wide"].column {
+				&.next-art, &.pre-art {
+					display: block;
+					width: 100%!important;
+				}
+			}
+			.pre-art {
+				text-align: left;
+			}
+		}
+	}
+}

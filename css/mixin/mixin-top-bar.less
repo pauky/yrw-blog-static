@@ -1,0 +1,40 @@
+// 页面头部
+@import "../common/variables";
+.mixin-top-bar {
+	margin-bottom: 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	height: 50px;
+	.ui.menu .item > .avatar:not(.ui) {
+		width: 30px;
+	}
+
+	.menu {
+		.menu-icon {
+			display: none !important;
+			.sidebar.icon {
+				margin-right: 0;
+				color: @blue;
+			}
+		}
+	}
+
+}
+
+// 小屏幕适应
+@media screen and (max-width: 960px) {
+	.mixin-top-bar {
+		.menu {
+			margin-bottom: 0!important;
+			.item {
+				display: none !important;
+				&.menu-icon {
+					display: inline-block !important;
+				}
+			}
+		}
+	}
+}
