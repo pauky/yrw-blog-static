@@ -20,4 +20,4 @@ $ npm install -g webpack
 ```
 
 ## 项目线上地址
-[yangrunwei.com](www.yangrunwei.com)
+[yangrunwei.com](http://www.yangrunwei.com)
